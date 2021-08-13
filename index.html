@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/dcf3890342.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main id="app">
+      <div class="app__container-clock">
+        <!-- Current time -->
+        <div class="app__container-clock__current-time">
+          <h2 class="app__container-clock__current-time--title">00:00</h2>
+        </div>
+
+        <div class="app__container-clock__info-clock">
+          <!-- Alarm -->
+          <div class="app__container-clock__info-clock__alarm">
+            <p>Alarm <i class="fas fa-bell"></i></p>
+
+            <h4 class="app__container-clock__info-clock__alarm--title">
+              06:00
+            </h4>
+            <button class="btn-set-alarm">Definir</button>
+          </div>
+
+          <!-- Date -->
+          <div class="app__container-clock__info-clock__date">
+            <p>Data <i class="fas fa-calendar-week"></i></p>
+            <h4 class="app__container-clock__info-clock__date--title">
+              14 | 07 | 2021
+            </h4>
+          </div>
+        </div>
+
+        <div class="app__container-clock__detail"></div>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
