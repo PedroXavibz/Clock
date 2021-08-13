@@ -21,6 +21,7 @@
 }
 
 body {
+  font-family: 'Righteous', cursive;
   line-height: 1.8;
 
   background-image: linear-gradient(135deg, #fad7a1 10%, #e96d71 100%);
@@ -38,7 +39,8 @@ body {
 
 /******************************************************** CLOCK CONTAINER STYLED ********************************************************/
 .app__container-clock {
-  height: calc(20rem + 50vmin);
+  height: auto;
+  min-height: calc(20rem + 50vmin);
   margin: calc(1rem + 1vw);
   padding: calc(2rem + 1.7vw);
 
@@ -46,6 +48,7 @@ body {
 
   flex-basis: 69.8rem;
   flex-grow: 1;
+  flex-wrap: wrap;
 
   display: flex;
   justify-content: space-between;
@@ -88,6 +91,7 @@ body {
 
 /******************************************************** CLOCK INFO STYLED ********************************************************/
 .app__container-clock__info-clock {
+  flex-wrap: wrap;
   flex-grow: 1;
 
   display: flex;
@@ -161,8 +165,4 @@ body {
 }
 /******************************************************** (MAX-WIDTH: 706px) ********************************************************/
 @media screen and (max-width: 706px) {
-  .app__container-clock {
-    height: auto;
-    flex-direction: column;
-  }
 }
