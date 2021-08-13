@@ -1,0 +1,168 @@
+/******************************************************** RESET ********************************************************/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/******************************************************** UTILITY COMPONENTS ********************************************************/
+:root {
+  font-size: 62.5%;
+
+  --primary-color: #f4f9f9;
+
+  --secondary-color: #f1d1d0;
+
+  --tertiary-color: #fbaccc;
+
+  --quaternary-color: #f875aa;
+}
+
+body {
+  line-height: 1.8;
+
+  background-image: linear-gradient(135deg, #fad7a1 10%, #e96d71 100%);
+}
+
+/******************************************************** MAIN STYLED ********************************************************/
+
+#app {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/******************************************************** CLOCK CONTAINER STYLED ********************************************************/
+.app__container-clock {
+  height: calc(20rem + 50vmin);
+  margin: calc(1rem + 1vw);
+  padding: calc(2rem + 1.7vw);
+
+  position: relative;
+
+  flex-basis: 69.8rem;
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: space-between;
+
+  background: var(--primary-color);
+
+  border-radius: 1.6rem;
+}
+
+.app__container-clock__detail {
+  width: 80%;
+  height: 4.3rem;
+
+  position: absolute;
+  top: -30px;
+  left: 50%;
+
+  transform: translate(-50%);
+
+  border-radius: 0.8rem;
+  background: var(--primary-color);
+}
+
+/******************************************************** CLOCK CURRENT TIME STYLED ********************************************************/
+.app__container-clock__current-time {
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--secondary-color);
+}
+
+.app__container-clock__current-time--title {
+  text-align: center;
+  font-size: calc(9.5rem + 4vw);
+  color: var(--quaternary-color);
+}
+
+/******************************************************** CLOCK INFO STYLED ********************************************************/
+.app__container-clock__info-clock {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background: var(--secondary-color);
+}
+
+.app__container-clock__info-clock__alarm,
+.app__container-clock__info-clock__date {
+  width: 80%;
+  padding: 0.5rem;
+  margin: calc(0.5rem + 0.5vh) 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--secondary-color);
+
+  background: var(--quaternary-color);
+  border-radius: 0.5rem;
+}
+
+.app__container-clock__info-clock__alarm p,
+.app__container-clock__info-clock__date p {
+  align-self: flex-end;
+  font-size: calc(2.5rem + 0.66667vw);
+}
+
+.btn-set-alarm {
+  width: calc(9.5rem + 2vw);
+  height: 3.5rem;
+
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-size: calc(1.2rem + 0.66667vw);
+  color: var(--quaternary-color);
+
+  background: var(--primary-color);
+  border-radius: 0.5rem;
+  border: 0;
+
+  transition: 0.45s ease-in;
+
+  cursor: pointer;
+}
+
+.btn-set-alarm:hover {
+  background: var(--secondary-color);
+}
+
+.app__container-clock__info-clock__alarm--title,
+.app__container-clock__info-clock__date--title {
+  font-size: calc(3.5rem + 0.66667vw);
+}
+
+/******************************************************** (MIN-WIDTH: 1510px) ********************************************************/
+@media screen and (min-width: 1510px) {
+  #app {
+    width: 1510px;
+    margin: 0 auto;
+  }
+
+  .btn-set-alarm {
+    font-size: 1.6rem;
+  }
+}
+/******************************************************** (MAX-WIDTH: 706px) ********************************************************/
+@media screen and (max-width: 706px) {
+  .app__container-clock {
+    height: auto;
+    flex-direction: column;
+  }
+}
