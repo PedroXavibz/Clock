@@ -33,17 +33,18 @@
         <div class="app__container-clock__info-clock">
           <!-- Alarm -->
           <div class="app__container-clock__info-clock__alarm">
-            <p>Alarme <i class="fas fa-bell"></i></p>
+            <p>Alarm <i class="fas fa-bell"></i></p>
 
             <h4 class="app__container-clock__info-clock__alarm--title">
               06:00
             </h4>
-            <button class="btn-set-alarm">Definir</button>
+            <button class="btn btn-open-set-alarm">Define</button>
+            <button class="btn btn-stop-alarm hidden">Stop</button>
           </div>
 
           <!-- Date -->
           <div class="app__container-clock__info-clock__date">
-            <p>Data <i class="fas fa-calendar-week"></i></p>
+            <p>Date <i class="fas fa-calendar-week"></i></p>
             <h4 class="app__container-clock__info-clock__date--title">
               14 | 07 | 2021
             </h4>
@@ -83,7 +84,10 @@
             />
           </label>
         </form>
+        <p class="app__model-alarm--warning hidden">Invalid value</p>
+
         <button class="btn-set">Set</button>
+
         <button class="btn-close-model">&times;</button>
       </div>
     </main>
