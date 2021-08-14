@@ -52,6 +52,40 @@
 
         <div class="app__container-clock__detail"></div>
       </div>
+
+      <div class="overlay hidden"></div>
+
+      <div class="app__model-alarm hidden">
+        <h2>Set alarm ⏰</h2>
+        <form action="">
+          <label for="app__model-alarm--hours" class="app__model-alarm__label">
+            <p>Hours</p>
+            <input
+              type="text"
+              name="hours"
+              maxlength="2"
+              autocomplete="off"
+              id="app__model-alarm__label--hours"
+            />
+          </label>
+
+          <label
+            for="app__model-alarm--minutes"
+            class="app__model-alarm__label"
+          >
+            <p>Minutes</p>
+            <input
+              type="text"
+              name="minutes"
+              maxlength="2"
+              autocomplete="off"
+              id="app__model-alarm__label--minutes"
+            />
+          </label>
+        </form>
+        <button class="bnt-set">Set</button>
+        <button class="btn-close-model">&times;</button>
+      </div>
     </main>
 
     <script src="index.js"></script>
